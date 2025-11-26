@@ -42,12 +42,18 @@
             color: #0066ff;
             text-decoration: none;
         }
-        .back-link {
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
             color: #4b5563;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
         }
-        .back-link:hover {
+        .nav-links a:hover {
             color: #0066ff;
         }
         .container {
@@ -158,6 +164,9 @@
             .container {
                 padding: 40px 20px;
             }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -165,7 +174,13 @@
     <nav class="nav">
         <div class="nav-content">
             <a href="../index.html" class="logo"><img src="../Copiq Logo.png" alt="Copiq Logo" style="height: 40px; width: auto;"></a>
-            <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#why-copiq">Why Copiq</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#investors">Partners</a></li>
+                <li><a href="https://copiq.com">Main Site</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -177,8 +192,104 @@
             <p>📌 This content is syndicated from <a href="https://copiq.com/ai-technology/generative-adversarial-networks/" target="_blank" rel="noopener">copiq.com</a>. Read the original article for the most up-to-date version.</p>
         </div>
 
-        <div class="content" id="article-content">
-            <p><em>Loading content...</em></p>
+        <div class="content">
+<div class="content">
+<div class="section">
+<h2><span class="icon">?</span>What are GANs?</h2>
+<div class="definition-box">
+                    GANs are a type of artificial intelligence that creates new, realistic data by pitting two neural networks against each other in a creative competition. Think of it as an AI art forger learning from an AI art detective!
+                </div>
+</div>
+<div class="section">
+<h2><span class="icon">⚔</span>The Two Players</h2>
+<div class="battle-arena">
+<div class="player">
+<div class="player-icon generator">🎨</div>
+<h3>Generator</h3>
+<p>Creates fake data (images, text, audio) trying to fool the discriminator into thinking it’s real</p>
+</div>
+<div class="vs">VS</div>
+<div class="player">
+<div class="player-icon discriminator">🔍</div>
+<h3>Discriminator</h3>
+<p>Examines data and tries to distinguish between real data and fake data from the generator</p>
+</div>
+</div>
+</div>
+<div class="section">
+<h2><span class="icon">⚙</span>How It Works</h2>
+<div class="process-steps">
+<div class="step">
+<h4>Random Noise Input</h4>
+<p>The generator starts with random noise (like static) as input</p>
+</div>
+<div class="step">
+<h4>Generator Creates</h4>
+<p>The generator transforms the noise into fake data (like an image)</p>
+</div>
+<div class="step">
+<h4>Discriminator Judges</h4>
+<p>The discriminator receives both real and fake data and tries to identify which is which</p>
+</div>
+<div class="step">
+<h4>Both Networks Learn</h4>
+<p>The generator learns to create more realistic fakes, while the discriminator learns to better detect them</p>
+</div>
+<div class="step">
+<h4>Repeat &amp; Improve</h4>
+<p>This process repeats thousands of times until the generator creates highly realistic data</p>
+</div>
+</div>
+</div>
+<div class="section">
+<h2><span class="icon">🚀</span>Real-World Applications</h2>
+<div class="applications">
+<div class="app-card">
+<div class="app-icon">🖼️</div>
+<h4>Image Generation</h4>
+<p>Creating realistic faces, artwork, and photos</p>
+</div>
+<div class="app-card">
+<div class="app-icon">🎮</div>
+<h4>Game Development</h4>
+<p>Generating textures and 3D models</p>
+</div>
+<div class="app-card">
+<div class="app-icon">🎬</div>
+<h4>Video &amp; Animation</h4>
+<p>Creating deepfakes and special effects</p>
+</div>
+<div class="app-card">
+<div class="app-icon">🏥</div>
+<h4>Medical Imaging</h4>
+<p>Enhancing and generating medical scans</p>
+</div>
+<div class="app-card">
+<div class="app-icon">👗</div>
+<h4>Fashion Design</h4>
+<p>Creating new clothing designs</p>
+</div>
+<div class="app-card">
+<div class="app-icon">🔧</div>
+<h4>Data Augmentation</h4>
+<p>Expanding training datasets</p>
+</div>
+</div>
+</div>
+<div class="section">
+<h2><span class="icon">💡</span>Key Takeaways</h2>
+<div class="key-points">
+<h4>Important Points to Remember:</h4>
+<ul>
+<li>GANs use competition between two networks to improve performance</li>
+<li>The generator never sees real data directly – it only learns from the discriminator’s feedback</li>
+<li>Training GANs can be challenging and requires careful balancing of both networks</li>
+<li>GANs have revolutionized AI’s ability to create realistic synthetic data</li>
+<li>Invented by Ian Goodfellow in 2014, GANs are now used across many industries</li>
+</ul>
+</div>
+</div>
+</div>
         </div>
     </div>
 
@@ -186,31 +297,5 @@
         <p>&copy; 2025 Copiq. All rights reserved.</p>
         <p><a href="https://copiq.com">copiq.com</a></p>
     </footer>
-
-    <script>
-        // Fetch and display the original content
-        fetch('https://copiq.com/ai-technology/generative-adversarial-networks/')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                // Try to extract the main article content
-                let content = doc.querySelector('article .entry-content') || 
-                             doc.querySelector('.post-content') ||
-                             doc.querySelector('.article-content') ||
-                             doc.querySelector('article') ||
-                             doc.querySelector('main');
-                
-                if (content) {
-                    document.getElementById('article-content').innerHTML = content.innerHTML;
-                } else {
-                    document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-technology/generative-adversarial-networks/">Read the original article on Copiq.com →</a></p>';
-                }
-            })
-            .catch(error => {
-                document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-technology/generative-adversarial-networks/">Read the original article on Copiq.com →</a></p>';
-            });
-    </script>
 </body>
 </html>

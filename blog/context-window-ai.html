@@ -42,12 +42,18 @@
             color: #0066ff;
             text-decoration: none;
         }
-        .back-link {
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
             color: #4b5563;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
         }
-        .back-link:hover {
+        .nav-links a:hover {
             color: #0066ff;
         }
         .container {
@@ -158,6 +164,9 @@
             .container {
                 padding: 40px 20px;
             }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -165,7 +174,13 @@
     <nav class="nav">
         <div class="nav-content">
             <a href="../index.html" class="logo"><img src="../Copiq Logo.png" alt="Copiq Logo" style="height: 40px; width: auto;"></a>
-            <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#why-copiq">Why Copiq</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#investors">Partners</a></li>
+                <li><a href="https://copiq.com">Main Site</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -177,8 +192,134 @@
             <p>📌 This content is syndicated from <a href="https://copiq.com/ai-technology/what-is-a-context-window-in-ai/" target="_blank" rel="noopener">copiq.com</a>. Read the original article for the most up-to-date version.</p>
         </div>
 
-        <div class="content" id="article-content">
-            <p><em>Loading content...</em></p>
+        <div class="content">
+<div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-container-core-post-content-is-layout-e0082cf6 wp-block-post-content-is-layout-constrained">
+<p class="has-text-align-center"><em>An <strong>AI context window</strong> is the total text a model can process at once. It functions as the model’s short-term memory. This limit, measured in tokens, includes the user’s input and any previous parts of the conversation. A larger context window allows the model to maintain more coherent and complex dialogues.</em></p>
+<p>You can think of an AI model’s context window as its short-term memory. It’s the total amount of text, your input, the conversation history, all of it, that the model can see and process at one time. This isn’t just a casual term; it’s a hard architectural limit, and it’s measured in something called tokens.</p>
+<p>A bigger window means a smarter conversation. Simple as that.</p>
+<h2 class="wp-block-heading">The Core Concept: Why This “Memory” Matters So Much</h2>
+<p>At its heart, the context window is a fixed-size buffer. It’s the model’s entire field of view for generating the next word. It’s not a permanent memory bank; it’s a transient workspace that gets wiped clean and reloaded with every single request you make. This workspace holds your latest prompt, the recent back-and-forth of the conversation, and often a hidden set of instructions called the system prompt. The size of this window is arguably one of the most critical constraints on what an LLM can do. It’s the difference between an AI that can summarize a 300-page book in one go and one that forgets what you said three sentences ago.</p>
+<p>The significance here is huge. A model with a small context window, say 4,000 tokens, will inevitably struggle if you ask a question that relies on information you provided ten turns earlier. The older details simply fall out of its “memory,” leading to frustratingly generic or inaccurate answers. But with the massive context windows we’re seeing now from Google, Anthropic, and others, a model can hold the entire thread of a complex dialogue, analyze a whole codebase, or review a massive report in a single pass. This isn’t just an incremental improvement; it’s a fundamental change in capability.</p>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<figure class="wp-block-image aligncenter size-large"><picture><source sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png.webp 1024w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png.webp 300w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png.webp 768w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png.webp 1101w" type="image/webp"/><img alt="short term memory with AI" class="wp-image-319" data-eio="p" decoding="async" height="248" sizes="(max-width: 1024px) 100vw, 1024px" src="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png" srcset="https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png 1024w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png 300w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png 768w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png 1101w" width="1024"/></picture></figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<h3 class="wp-block-heading">How it Functions as Short-Term Memory</h3>
+<p>The “short-term memory” analogy is pretty spot-on, technically. When you send a prompt, the model loads that text, plus whatever conversational history fits, into its active processing space. The secret sauce, the self-attention mechanism, then gets to work, meticulously comparing every single token in that window to every other token. This is how it figures out that “it” in your last sentence refers to the “database schema” you mentioned five minutes ago.</p>
+<p>But once that window is full, something has to give. Typically, the oldest information gets pushed out to make room for the new stuff, following a first-in, <strong>first-out (FIFO) logic</strong>. This is precisely why a model can “forget” the brilliant premise you laid out at the start of a long brainstorming session. In practice, understanding this limitation is everything for getting good results.</p>
+<h3 class="wp-block-heading">The Role of Context in Keeping a Conversation Coherent</h3>
+<p>Without a decent context window, dialogue just falls apart. Coherence is a direct result of the model’s ability to remember what’s going on.</p>
+<ul class="wp-block-list">
+<li><strong>It holds the state of the conversation.</strong> Simple questions and answers build up a shared history.</li>
+<li><strong>Pronoun resolution.</strong> This is a big one. It’s how the model knows what “they” or “it” refers to without constantly asking for clarification.</li>
+<li>A larger window helps track a user’s intent as it evolves over multiple turns… a critical feature.</li>
+<li>It can see its own recent responses, which helps it avoid repeating itself.</li>
+<li><strong>Complex Instructions:</strong> It can handle multi-step tasks that you feed it piece by piece.</li>
+<li>The model can also pick up on subtle things, like shifts in tone or topic, that happen over a longer chat.</li>
+<li>Keeps the facts straight. The model’s output remains consistent with details established earlier.</li>
+</ul>
+<h2 class="wp-block-heading">The Mechanics: It’s All About Tokens</h2>
+<p>To really get how context windows work, you have to understand tokenization. Models don’t read words or characters; they see numerical representations called tokens. And the context window size is <em>always</em> measured in tokens, not words. This is a crucial distinction for developers, because it affects how much you can stuff into a prompt and, frankly, how much you get billed.</p>
+<h3 class="wp-block-heading">Understanding Tokens: The Building Blocks</h3>
+<p>A token is the smallest unit of meaning the model works with. There’s a rule of thumb for English that one token is roughly four characters, or about 0.75 of a word. But, and this is a big but, that’s a wild approximation. The reality is much more complex.</p>
+<p>The model uses a specific tokenizer to break text down. A common word like “the” is almost always a single token. But a less common word like “tokenization” might get split into “token” and “ization.” This subword tokenization is clever because it lets the model handle a massive vocabulary, including weird jargon, misspellings, and brand new words, without needing a unique token for everything. It’s a balance between character-level granularity and word-level efficiency.</p>
+<h3 class="wp-block-heading">Tokenization in Practice</h3>
+<p>Let’s look at a simple sentence: “What is a context window in AI?”</p>
+<p>A tokenizer would likely split this into [“What”, ” is”, ” a”, ” context”, ” window”, ” in”, ” AI”, “?”]. Eight words and a punctuation mark, 8 tokens. Easy.</p>
+<p>But what about this: “The new Google Gemini model offers incredible efficiency.”</p>
+<p>This could break down into something like [“The”, ” new”, ” Google”, ” G”, “em”, “ini”, ” model”, ” offers”, ” incredible”, ” efficiency”, “.”]. See what happened? “Gemini,” being a proper noun that might not have been a single unit in the tokenizer’s vocabulary, got split into subwords. The token count is no longer a perfect match for the word count.</p>
+<h3 class="wp-block-heading">Calculating the Full Context Length</h3>
+<p>The total number of tokens you’re using isn’t just your most recent question. It’s a sum of multiple parts, and developers have to track this meticulously.</p>
+<ol class="wp-block-list">
+<li><strong>System Prompt:</strong> Those hidden instructions that tell the model how to behave (e.g., “You are a helpful assistant who responds in JSON”). This is always there, eating up tokens.</li>
+<li><strong>Conversational History:</strong> All the previous user messages and AI responses you send back with the new query.</li>
+<li><strong>Your Current Input:</strong> The actual question you’re asking right now.</li>
+<li><strong>Space for the Output:</strong> This is the gotcha. The context window has to hold both the input <em>and</em> the generated response. If you ask for a long output, you’re using up a chunk of the window that could have been used for input context.</li>
+</ol>
+<p>If the total of your system prompt, history, and new input gets too close to the model’s limit, you’re in trouble. The model might have to truncate the oldest messages, or worse, not have enough room to give you the detailed answer you need.</p>
+<h2 class="wp-block-heading">The Evolution of Context Windows</h2>
+<p>The race for bigger context windows has been one of the main battlegrounds for AI labs like OpenAI, Google, and Anthropic. Early models were severely constrained, but the recent explosion in window sizes has unlocked entirely new use cases.</p>
+<p>Here’s a look at how things have changed. A bigger <strong>context window</strong> dramatically improves an AI’s <strong>ability</strong> to digest <strong>information</strong> from long <strong>inputs</strong>, directly affecting <strong>performance</strong> and <strong>accuracy</strong>. This is what allows models from <strong>Google</strong> and others to tackle a complex user <strong>question</strong> without running into <strong>issues</strong> with forgotten context.</p>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Model / Concept</th><th>Context Window Size (Tokens)</th><th>Approx. English Word Count</th><th>Impact on Performance and Ability</th></tr><tr><td><strong>Token (Fundamental Unit)</strong></td><td>N/A (Unit of Measurement)</td><td>~0.75 of an English word</td><td>This is the basic piece of information. The granularity of processing.</td></tr><tr><td><strong>Smaller Context Windows</strong></td><td>4,000 – 16,000</td><td>~3,000 – 12,000 words</td><td>Limited. You’d struggle with long documents and often lose context, which really hurts output accuracy.</td></tr><tr><td><strong>OpenAI GPT-4 Turbo</strong></td><td>128,000</td><td>~96,000 words</td><td>A huge leap. Great performance for analyzing something like a 300-page book in one shot. Much better efficiency.</td></tr><tr><td><strong>Anthropic <a data-id="https://copiq.com/models/claude-versus-chatgpt-for-writing/" data-type="link" href="https://copiq.com/models/claude-versus-chatgpt-for-writing/">Claude</a> 3 Family</strong></td><td>200,000</td><td>~150,000 words</td><td>Excellent recall accuracy over very long texts. Has the ability to process multiple documents or entire codebases.</td></tr><tr><td><strong>Google Gemini 1.5 Pro</strong></td><td>1,000,000 (In Preview)</td><td>~750,000 words</td><td>Peak performance right now. It can process an hour of video or over 700k words of text in a single input.</td></tr><tr><td><strong>“Lost in the Middle” Issue</strong></td><td>Affects all context windows</td><td>N/A</td><td>A known AI problem where information in the middle of a long input gets ignored, reducing accuracy. A real-world gotcha.</td></tr></tbody></table></figure>
+<p><em>Sources: Data compiled from official announcements and documentation from Google AI, OpenAI, and Anthropic (2023-2024).</em></p>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<h3 class="wp-block-heading">From Early Models to Today’s Giants</h3>
+<p>Anyone who worked with models like GPT-2 or the early GPT-3 remembers the pain. With context windows of 1k-4k tokens, you couldn’t even summarize a moderately long article without resorting to complex “chunking” strategies. You’d have to write code to split a document, send each piece to the model, and then try to stitch the summaries together—a process that was clunky and almost always lost important cross-references.</p>
+<p>The jump to 128k, 200k, and now Google’s experimental 1 million token window with Gemini 1.5 Pro is a paradigm shift. We’ve gone from manually feeding the model bite-sized pieces to letting it drink from a firehose. The ability to see the “whole picture”, be it a book, a financial report, or a software repository, is transformative.</p>
+<h2 class="wp-block-heading">A Quick Look at Gemini 1.5 Pro’s Million-Token Window</h2>
+<p>That one million token window is staggering. It lets you do things that were pure science fiction a few years ago:</p>
+<ul class="wp-block-list">
+<li><strong>Video Analysis:</strong> Reason about the content of an hour-long video.</li>
+<li><strong>Codebase Comprehension:</strong> Analyze over 30,000 lines of code at once.</li>
+<li><strong>Massive Document Review:</strong> Ingest and query texts longer than <em>The Lord of the Rings</em>.</li>
+</ul>
+<p>This changes the model from a simple chatbot into a powerful analytical engine.</p>
+<h2 class="wp-block-heading">The Technical Reason for the Limit</h2>
+<p>So if bigger is better, why not have an infinite context window? The answer lies deep in the Transformer architecture that powers these models, and it boils down to one thing: computational cost. The limitation isn’t arbitrary; it’s a direct consequence of the self-attention mechanism.</p>
+<h3 class="wp-block-heading">The Self-Attention Bottleneck</h3>
+<p>Self-attention is what makes these models so powerful. It allows every token to look at every other token in the context window to determine what’s important. It’s an all-to-all comparison.</p>
+<p>But this has a brutal computational cost. The complexity scales quadratically with the input length (N). In Big O notation, this is O(N²). In plain English: if you double the input length, the number of calculations required quadruples. This is the single biggest barrier to infinite context.</p>
+<h2 class="wp-block-heading">The O(N²) Problem in Numbers</h2>
+<ul class="wp-block-list">
+<li>A 4,000-token input needs about 16 million attention calculations.</li>
+<li>A 128,000-token input needs over 16 <em>billion</em> calculations.</li>
+<li>A 1,000,000-token input? That’s a <em>trillion</em> calculations.</li>
+</ul>
+<p>This exponential growth demands a shocking amount of GPU power and dramatically increases latency.</p>
+<h3 class="wp-block-heading">Memory Constraints (VRAM is Expensive)</h3>
+<p>It’s not just about processing power; it’s also about memory. To do these calculations, the model needs to create a massive “attention matrix” of size N x N. This matrix has to live in the GPU’s ultra-fast VRAM to be processed efficiently. A high-end GPU might have 80GB of VRAM, but an attention matrix for a huge context window can easily exceed that, not to mention all the other model parameters that need to be stored. This makes running models with huge contexts incredibly expensive.</p>
+<h3 class="wp-block-heading">Training Data Limitations</h3>
+<p>Finally, models are generally pre-trained with a specific context length in mind. The way they understand the order of words, through something called positional encodings, is optimized for that length. While you can sometimes stretch this at inference time, performance tends to degrade when you go far beyond what the model saw during its training.</p>
+<h2 class="wp-block-heading">The Real-World Impact on Performance</h2>
+<p>The practical benefits of a larger context window are profound. For developers, it unlocks new applications and massively simplifies architectures.</p>
+<ul class="wp-block-list">
+<li><strong>Document Summarization:</strong> Instead of a complex “map-reduce” workflow of summarizing chunks, you can now feed the entire document to the model. This gives a holistic understanding, eliminates errors at chunk boundaries, and is way more efficient.</li>
+<li><strong>Code Generation &amp; Debugging:</strong> This is a game-changer for developers. You can give the model the entire codebase as context. It can then write new functions that match the existing style, trace bugs across multiple files, and even help with large-scale refactoring.</li>
+</ul>
+<p>Ultimately, a bigger window means better accuracy and higher efficiency. The model has more grounding information, so it’s less likely to hallucinate or give irrelevant answers.</p>
+<h2 class="wp-block-heading">Overcoming the Challenges of Long Context</h2>
+<p>Bigger windows are great, but they aren’t a silver bullet. They come with their own set of problems.</p>
+<h3 class="wp-block-heading">The “Lost in the Middle” Phenomenon</h3>
+<p>This is a weird but well-documented issue. Studies have shown that models have a U-shaped performance curve for information retrieval. They are great at remembering details from the very beginning and very end of a long context, but their recall for information stuck in the middle drops off noticeably. So, even if the answer is <em>in</em> the context window, the model might just ignore it.</p>
+<p>To get around this, prompt engineers often place the most critical information or instructions at the start or, more commonly, at the very end of the prompt.</p>
+<h3 class="wp-block-heading">Latency and Cost</h3>
+<p>We’ve already touched on this, but it bears repeating. Using a massive context window for a simple question is slow and expensive. The latency can be a deal-breaker for real-time applications, and API costs can spiral out of control. Smart application design involves using just enough context to get the job done, not the maximum available.</p>
+<h3 class="wp-block-heading">The RAG Workaround</h3>
+<p>For many real-world applications, the best approach isn’t an enormous context window but a technique called <strong>Retrieval Augmented Generation (RAG)</strong>. Instead of stuffing everything into the prompt, RAG works like this:</p>
+<ol class="wp-block-list">
+<li>A user asks a question.</li>
+<li>The system first searches an external knowledge base (like a vector database) for a few highly relevant snippets of text.</li>
+<li>It then injects <em>only these relevant snippets</em> into the context window along with the user’s question.</li>
+<li>The LLM generates an answer based on this focused, bite-sized context.</li>
+</ol>
+<p>RAG gives you access to a virtually unlimited amount of information while keeping the actual context window small, fast, and cheap. It’s a pragmatic, best-of-both-worlds solution.</p>
+<h2 class="wp-block-heading">The Future: The Hunt for Infinite Context</h2>
+<p>The quest to break the quadratic scaling barrier is one of the hottest areas in AI research. The goal is to get to a near-infinite context, where the model’s memory is no longer the primary limitation.</p>
+<p>Researchers are attacking this with new architectures that move beyond standard Transformers. Things like <strong>Linear Attention</strong>, <strong>Sparse Attention</strong> (used in models like Longformer), and entirely new approaches like <strong>State Space Models (SSMs)</strong> such as Mamba are all trying to reduce that O(N²) complexity to something more manageable, like O(N). These innovations are incredibly promising and could lead to models that can process information linearly, effectively giving them an endless memory stream.</p>
+<h2 class="wp-block-heading">Typically Asked Questions</h2>
+<p>Read these common questions.</p>
+<div class="rank-math-block" id="rank-math-faq">
+<div class="rank-math-list">
+<div class="rank-math-list-item" id="faq-question-1756436656734">
+<h3 class="rank-math-question">So a bigger context window, like in Google’s Gemini, just makes the output better?</h3>
+<div class="rank-math-answer">
+<p>Essentially, yes. It gives the AI more information to work with, which directly boosts its performance and accuracy. For any complex question that requires understanding a lot of text, a larger window means the model won’t “forget” crucial details from the beginning of your input. This leads to more coherent, less error-prone outputs.</p>
+</div>
+</div>
+<div class="rank-math-list-item" id="faq-question-1756436663596">
+<h3 class="rank-math-question">What happens if my document is bigger than the context window?</h3>
+<div class="rank-math-answer">
+<p>The model will effectively become amnesiac about the earliest parts of the information. The oldest tokens are dropped to make room for new ones. This is a huge problem for accuracy because the model is making decisions based on an incomplete picture, which often results in an output that misses the point of your original question.</p>
+</div>
+</div>
+<div class="rank-math-list-item" id="faq-question-1756436671667">
+<h3 class="rank-math-question">Can you give a practical example of how the window size changes things?</h3>
+<div class="rank-math-answer">
+<p>Sure. Imagine trying to get an AI to write a new chapter for a novel. With a small context window, you could only feed it the last few pages. The AI’s output would likely be inconsistent in tone and plot. With a massive 200k-token window, you could feed it the <em>entire novel</em> up to that point. The AI’s ability to generate a new chapter that perfectly matches the existing style, characters, and plot points would be dramatically better. The efficiency gain is huge—one prompt instead of hundreds of tiny, disconnected ones.</p>
+</div>
+</div>
+</div>
+</div></div>
         </div>
     </div>
 
@@ -186,31 +327,5 @@
         <p>&copy; 2025 Copiq. All rights reserved.</p>
         <p><a href="https://copiq.com">copiq.com</a></p>
     </footer>
-
-    <script>
-        // Fetch and display the original content
-        fetch('https://copiq.com/ai-technology/what-is-a-context-window-in-ai/')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                // Try to extract the main article content
-                let content = doc.querySelector('article .entry-content') || 
-                             doc.querySelector('.post-content') ||
-                             doc.querySelector('.article-content') ||
-                             doc.querySelector('article') ||
-                             doc.querySelector('main');
-                
-                if (content) {
-                    document.getElementById('article-content').innerHTML = content.innerHTML;
-                } else {
-                    document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-technology/what-is-a-context-window-in-ai/">Read the original article on Copiq.com →</a></p>';
-                }
-            })
-            .catch(error => {
-                document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-technology/what-is-a-context-window-in-ai/">Read the original article on Copiq.com →</a></p>';
-            });
-    </script>
 </body>
 </html>

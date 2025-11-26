@@ -42,12 +42,18 @@
             color: #0066ff;
             text-decoration: none;
         }
-        .back-link {
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
             color: #4b5563;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
         }
-        .back-link:hover {
+        .nav-links a:hover {
             color: #0066ff;
         }
         .container {
@@ -158,6 +164,9 @@
             .container {
                 padding: 40px 20px;
             }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -165,7 +174,13 @@
     <nav class="nav">
         <div class="nav-content">
             <a href="../index.html" class="logo"><img src="../Copiq Logo.png" alt="Copiq Logo" style="height: 40px; width: auto;"></a>
-            <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#why-copiq">Why Copiq</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#investors">Partners</a></li>
+                <li><a href="https://copiq.com">Main Site</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -177,8 +192,311 @@
             <p>📌 This content is syndicated from <a href="https://copiq.com/ai-seo/optimizing-ai-overviews-with-structured-data-schema/" target="_blank" rel="noopener">copiq.com</a>. Read the original article for the most up-to-date version.</p>
         </div>
 
-        <div class="content" id="article-content">
-            <p><em>Loading content...</em></p>
+        <div class="content">
+<div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-container-core-post-content-is-layout-e0082cf6 wp-block-post-content-is-layout-constrained">
+<p class="has-text-align-center"><em><strong>Schema markup</strong> structures data for <strong>Google’s AI Overviews</strong>. This structured data helps the AI accurately understand your content’s context and key details. Implementing relevant schema types, such as FAQPage or HowTo, provides clear signals to the AI. Proper implementation <a data-id="https://copiq.com/ai-seo/optimize-content-for-featured-snippets-ai-prompts/" data-type="link" href="https://copiq.com/ai-seo/optimize-content-for-featured-snippets-ai-prompts/">increases your content’s chances of inclusion within these AI-generated summaries</a>.</em></p>
+<p>Google’s AI Overviews are here, and they’re fundamentally changing the game. We need to talk about how to feed them, and the best way is with structured data, specifically, schema markup. Think of it this way: you can let the AI guess what your page is about, or you can hand it a neatly labeled blueprint.</p>
+<p>Schema is that blueprint. It’s a vocabulary that gives Google’s AI unambiguous context about your content. Using types like <strong>FAQPage</strong> or <strong>HowTo</strong> isn’t just a suggestion; it’s a direct signal that can dramatically increase the odds of your content getting pulled into those valuable AI summaries.</p>
+<h2 class="wp-block-heading">What’s Really Going On With AI Overviews?</h2>
+<p>The shift away from a simple list of ten blue links is jarring. Google is now trying to be an <strong>answer engine</strong>, not just a search engine. The AI Overview is the manifestation of that goal, a synthesized answer built from what it considers the most reliable web pages. For us, this means the goalposts have moved. It’s not enough to rank; you have to be <em>citable</em>. Your data has to be so clear and machine-readable that an AI can confidently use it as a source.</p>
+<p>The AI models behind this are sophisticated, but they’re not psychic. They crave structure. While they can parse plain text, that process is full of inference and potential for misinterpretation. That’s where schema.org markup becomes mission-critical. It’s a layer of code (usually JSON-LD, which is what we’ll focus on) that lives on your site. Users never see it, but it speaks directly to machines. It’s how you say, “Hey Google, this isn’t just a random number, it’s a price, and it’s in USD,” or “This whole section is a step-by-step HowTo guide.”</p>
+<p>Without that clarity, your critical data might just be noise.</p>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<figure class="wp-block-image aligncenter size-large"><picture><source sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-1024x576.jpg.webp 1024w, https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-300x169.jpg.webp 300w, https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-768x432.jpg.webp 768w, https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-1536x864.jpg.webp 1536w, https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews.jpg.webp 2048w" type="image/webp"/><img alt="Structured data for ai overviews" class="wp-image-383" data-eio="p" decoding="async" height="576" sizes="(max-width: 1024px) 100vw, 1024px" src="https://copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-1024x576.jpg" srcset="https:https://copiq.com//copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-1024x576.jpg 1024w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-300x169.jpg 300w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-768x432.jpg 768w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews-1536x864.jpg 1536w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/09/Structured-data-for-ai-overviews.jpg 2048w" width="1024"/></picture></figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
+<div aria-hidden="true" class="wp-block-spacer" style="height:0px"></div>
+<h2 class="wp-block-heading">Getting Started: The Foundational Work for AI Overviews</h2>
+<p>Preparing for AI Overviews isn’t about finding a single silver bullet. It’s a strategic process of structuring your data. The entire goal is to make your page the most definitive, most easily understood source for a given topic. And that begins with figuring out what you have before you start building anything new.</p>
+<h3 class="wp-block-heading">First, Audit Your Content and Existing Schema</h3>
+<p>Before you write a single line of new JSON-LD, you have to assess the current state of affairs. A good audit gives you a baseline and, more importantly, reveals the biggest opportunities. In practice, this means a methodical review of your most important pages.</p>
+<p>You need to know what you’re working with.</p>
+<ul class="wp-block-list">
+<li>Start by inventorying your high-value pages. Your top traffic drivers, your core service pages, the content that actually matters to your business.</li>
+<li>Run those URLs through Google’s Rich Results Test. This is important. It tells you not only if your schema is valid, but if it’s eligible for a rich result, which is a strong proxy for what the AI is looking for.</li>
+<li>Look for the obvious data gaps. Got a page full of questions and answers but no FAQPage schema? That’s a huge, easy win. Is there a product on the page with no Product markup? Another one.</li>
+<li>Fix errors immediately. Warnings are next. Errors often mean Google just ignores the schema entirely.</li>
+<li>Then map what you have to what you <em>should</em> have. The page content itself should dictate the most logical schema types.</li>
+</ul>
+<h3 class="wp-block-heading">Prioritizing the Right Schema Types</h3>
+<p>Not all schema is created equal, and the key is relevance. Slapping Article schema on everything is better than nothing, but it’s lazy. The real impact comes from matching the schema to the content’s purpose. A step-by-step tutorial screams for HowTo schema. A page comparing different software needs Product schema with aggregateRating and offers. This targeted approach sends the clearest possible signal to Google about what your data represents, which is exactly what you need to get featured.</p>
+<p>What’s interesting here is how different schema types serve different functions for the AI…</p>
+<p>HowTo schema basically spoon-feeds the AI an ordered list of instructions. It’s one of the most direct ways to be a source for “how-to” queries. Then you have FAQPage schema, which structures a Q&amp;A exchange in a way that lets the AI lift your concise answer directly. For e-commerce, Product schema is non-negotiable; it provides the core data points like price, SKU, and availability that the AI uses for comparisons. Even basic Article schema is important, as it helps establish authorship and publication dates, strong signals that tie into the whole E-E-A-T framework. All of this structured data, working together, provides the semantic context the AI needs to even consider your page in the first place. And with data from places like BrightEdge showing AI Overviews appearing on ~84% of queries, this isn’t a niche feature anymore. It’s a major visibility factor.</p>
+<h3 class="wp-block-heading">Example of Schema For A Website</h3>
+<p>Let’s say you have a website that sells courses. Here’s an example of schema you could use.</p>
+<pre class="wp-block-code"><code>{
+  "@context": "https://schema.org",
+  "@type": ["Course", "Product"],
+  "name": "Complete JavaScript Development Bootcamp",
+  "description": "Master JavaScript from basics to advanced concepts including ES6+, Node.js, React, and real-world projects. Perfect for beginners and intermediate developers.",
+  "provider": {
+    "@type": "Organization",
+    "name": "TechAcademy Pro",
+    "url": "https://techacademypro.com",
+    "logo": "https://techacademypro.com/logo.png"
+  },
+  "instructor": [
+    {
+      "@type": "Person",
+      "name": "Sarah Johnson",
+      "jobTitle": "Senior JavaScript Developer",
+      "description": "10+ years of experience in web development, formerly at Google and Netflix",
+      "image": "https://techacademypro.com/instructors/sarah-johnson.jpg"
+    }
+  ],
+  "courseCode": "JS-BOOT-2024",
+  "educationalLevel": "Beginner to Intermediate",
+  "teaches": [
+    "JavaScript Fundamentals",
+    "ES6+ Features",
+    "DOM Manipulation",
+    "Asynchronous Programming",
+    "Node.js Basics",
+    "React Framework",
+    "API Integration",
+    "Testing Best Practices"
+  ],
+  "coursePrerequisites": "Basic understanding of HTML and CSS",
+  "timeRequired": "P12W",
+  "totalTime": "PT80H",
+  "numberOfCredits": 12,
+  "educationalCredentialAwarded": "Certificate of Completion",
+  "courseMode": ["Online", "Self-paced"],
+  "inLanguage": "en-US",
+  "availableLanguage": ["en-US", "es-ES", "fr-FR"],
+  "syllabusSections": [
+    {
+      "@type": "Syllabus",
+      "name": "JavaScript Fundamentals",
+      "description": "Variables, data types, functions, and control structures",
+      "timeRequired": "PT15H"
+    },
+    {
+      "@type": "Syllabus", 
+      "name": "Advanced JavaScript",
+      "description": "Closures, prototypes, async/await, and modern ES6+ features",
+      "timeRequired": "PT20H"
+    },
+    {
+      "@type": "Syllabus",
+      "name": "React Development",
+      "description": "Component-based development, hooks, state management",
+      "timeRequired": "PT25H"
+    },
+    {
+      "@type": "Syllabus",
+      "name": "Real-World Projects",
+      "description": "Build 5 complete applications from scratch",
+      "timeRequired": "PT20H"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "299.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2024-01-01",
+    "validThrough": "2024-12-31",
+    "priceValidUntil": "2024-12-31",
+    "url": "https://techacademypro.com/courses/javascript-bootcamp",
+    "seller": {
+      "@type": "Organization",
+      "name": "TechAcademy Pro"
+    },
+    "includesObject": [
+      {
+        "@type": "DigitalDocument",
+        "name": "80+ Hours of Video Content"
+      },
+      {
+        "@type": "DigitalDocument", 
+        "name": "Downloadable Resources &amp; Code Files"
+      },
+      {
+        "@type": "Service",
+        "name": "Lifetime Access"
+      },
+      {
+        "@type": "Service",
+        "name": "Certificate of Completion"
+      },
+      {
+        "@type": "Service",
+        "name": "Community Access &amp; Support"
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "1247",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Mike Chen"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Excellent course! The projects are practical and the explanations are clear. Went from beginner to confident developer.",
+      "datePublished": "2024-08-15"
+    }
+  ],
+  "hasCourseInstance": [
+    {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "courseSchedule": {
+        "@type": "Schedule",
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "repeatFrequency": "Anytime"
+      }
+    }
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "audienceType": "Web Developers, Career Changers, Computer Science Students",
+    "educationalRole": "student"
+  },
+  "learningResourceType": [
+    "Video Tutorial",
+    "Interactive Exercise", 
+    "Project-based Learning",
+    "Code Repository"
+  ],
+  "interactivityType": "active",
+  "educationalUse": "instruction",
+  "typicalAgeRange": "18-65",
+  "competencyRequired": [
+    "Basic HTML knowledge",
+    "Basic CSS knowledge",
+    "Computer literacy"
+  ],
+  "teaches": [
+    {
+      "@type": "DefinedTerm",
+      "name": "JavaScript Programming",
+      "url": "https://en.wikipedia.org/wiki/JavaScript"
+    },
+    {
+      "@type": "DefinedTerm", 
+      "name": "Web Development",
+      "url": "https://en.wikipedia.org/wiki/Web_development"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "React Framework",
+      "url": "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+    }
+  ],
+  "image": "https://techacademypro.com/courses/javascript-bootcamp/thumbnail.jpg",
+  "video": {
+    "@type": "VideoObject",
+    "name": "JavaScript Bootcamp Preview",
+    "description": "Get a preview of what you'll learn in our comprehensive JavaScript course",
+    "thumbnailUrl": "https://techacademypro.com/courses/javascript-bootcamp/video-thumb.jpg",
+    "uploadDate": "2024-01-15",
+    "duration": "PT5M30S",
+    "embedUrl": "https://techacademypro.com/embed/js-bootcamp-preview"
+  },
+  "dateCreated": "2024-01-01",
+  "dateModified": "2024-09-15",
+  "datePublished": "2024-01-01",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TechAcademy Pro"
+  },
+  "genre": "Technology Education",
+  "keywords": [
+    "JavaScript",
+    "Web Development", 
+    "Programming",
+    "React",
+    "Node.js",
+    "Frontend Development",
+    "Full Stack Development",
+    "Online Course",
+    "Coding Bootcamp"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://techacademypro.com/courses/javascript-bootcamp"
+  }
+}</code></pre>
+<p>This comprehensive schema markup combines multiple schema.org types (<code>Course</code>, <code>Product</code>, <code>Offer</code>) to provide rich context that AI LLMs can easily parse and understand. Here are the key benefits for AI citation:</p>
+<p><strong>Why this helps with AI LLM citations:</strong></p>
+<ol class="wp-block-list">
+<li><strong>Clear Content Structure</strong> – The schema explicitly defines what the course teaches, prerequisites, duration, and learning outcomes</li>
+<li><strong>Authority Indicators</strong> – Instructor credentials, ratings, and reviews establish credibility</li>
+<li><strong>Semantic Relationships</strong> – Links concepts to standard definitions (Wikipedia URLs in <code>teaches</code>)</li>
+<li><strong>Rich Metadata</strong> – Includes pricing, availability, languages, and audience information</li>
+<li><strong>Educational Context</strong> – Specifies educational level, competencies, and learning resource types</li>
+</ol>
+<p><strong>Key elements for AI understanding:</strong></p>
+<ul class="wp-block-list">
+<li><code>teaches</code> and <code>competencyRequired</code> help AI understand the subject matter</li>
+<li><code>educationalLevel</code> and <code>audience</code> clarify who it’s for</li>
+<li><code>syllabusSections</code> provide detailed curriculum breakdown</li>
+<li><code>aggregateRating</code> and <code>review</code> establish social proof</li>
+<li><code>learningResourceType</code> and <code>courseMode</code> specify delivery method</li>
+</ul>
+<p><strong>Implementation tip:</strong> Add this JSON-LD script to your page’s <code>&lt;head&gt;</code> section. The dual typing as both <code>Course</code> and <code>Product</code> ensures it’s understood in both educational and commercial contexts, making it more likely to be cited by AI systems looking for authoritative learning resources.</p>
+<h3 class="wp-block-heading">Don’t Forget E-E-A-T</h3>
+<p>Google’s obsession with Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T) gets amplified in the AI era. The AI is explicitly programmed to favor credible sources. Schema is one of your most powerful tools for demonstrating E-E-A-T in a machine-readable way.</p>
+<p>For instance, using Article schema with author and publisher properties is a start. But that’s table stakes. A better implementation connects that author property to a Person schema entity on an author bio page. That Person schema should then use sameAs to link out to the author’s verified social media profiles (like LinkedIn or a relevant industry forum). Now you’re not just telling Google a name… you’re building a verifiable graph of expertise. This helps the AI confirm your trustworthiness, making your site a much more attractive source.</p>
+<h2 class="wp-block-heading">Technical Implementation and Why Tools Help</h2>
+<p>Sure, you can write JSON-LD by hand. But for any site with more than a few pages, it’s wildly inefficient and a recipe for syntax errors. A misplaced comma can invalidate the whole block. This is where modern SEO platforms or even WordPress plugins like Yoast SEO or Rank Math become invaluable. They don’t just automate the generation; they help you build an interconnected schema <em>graph</em>.</p>
+<h4 class="wp-block-heading">Automating the Tedious Stuff</h4>
+<p>Instead of coding from scratch, you’re filling out fields in an interface. This is less about being lazy and more about ensuring consistency and reducing human error. A good tool will automatically pull the headline, publish date, author, and other details to populate the schema on every new post.</p>
+<h4 class="wp-block-heading">Validation is Key</h4>
+<p>Invalid schema is useless schema. It’s typically ignored. Most good SEO tools have validation built-in or link you directly to Google’s Rich Results Test. This lets you sanity-check your implementation before (or right after) you push it live, so you’re not just shipping broken code. (A pro-tip: always test your most important templates in the validator <em>before</em> they go live).</p>
+<h4 class="wp-block-heading">It’s All About the Graph</h4>
+<p>Isolated schema snippets are fine. A fully interconnected graph is better. A schema graph is how you show relationships. It’s how you tell Google that this Article was written by this Person, who works for this Organization, and that the article is part of the WebSite. This rich, contextual understanding is precisely what Google’s AI needs to generate nuanced and accurate overviews. A common mistake is using tools that generate disconnected nodes; you need to ensure they’re using @id references correctly to link everything together.</p>
+<h2 class="wp-block-heading">This Isn’t a “Set It and Forget It” Task</h2>
+<p>Optimizing for AI Overviews is a moving target. Google’s AI is constantly being refined, and the landscape is always shifting. This has to be a continuous process.</p>
+<p>Adopting a proactive mindset is the only way to stay relevant here. What you do directly impacts how well the AI can use your data.</p>
+<ul class="wp-block-list">
+<li><strong>Keep an eye on your performance.</strong> Check Google Search Console to see which pages are getting clicked from AI Overviews. What do they have in common?</li>
+<li>The schema.org vocabulary is always growing. Stay updated on new properties that might be relevant to your industry.</li>
+<li>Build your content strategy <em>with schema in mind</em>. If you know HowTo and FAQPage are powerful, create more content that naturally fits those formats.</li>
+<li>Test everything. You might find that adding a certain property correlates with better visibility. A/B testing your schema is an advanced but powerful technique.</li>
+<li>Watch your competitors. See what schema they’re implementing on the pages that are getting featured in AI Overviews. You can learn a lot from their source code.</li>
+<li>And none of this matters if your core technical SEO is a mess. The site has to be crawlable, indexable, fast, and mobile-friendly. That’s the foundation for everything.</li>
+</ul>
+<p>Ultimately, the goal is to make providing clean, unambiguous data a fundamental part of your digital strategy.</p>
+<h2 class="wp-block-heading">Some Real-Talk FAQs on Schema for AI</h2>
+<p>Check out the questions below.</p>
+<div class="rank-math-block" id="rank-math-faq">
+<div class="rank-math-list">
+<div class="rank-math-list-item" id="faq-question-1758253884655">
+<h3 class="rank-math-question">Okay, so how <em>exactly</em> does schema help the AI understand my page better?</h3>
+<div class="rank-math-answer">
+<p>Fundamentally, it removes ambiguity. The AI can <em>infer</em> that a numbered list is a set of instructions, but HowTo schema <em>explicitly declares</em> it. This shifts the AI’s process from guessing to knowing. By structuring the data, you’re providing perfect clarity, which makes it far more likely the AI will trust and use your content to build its overview. It’s about being the most reliable source in the room.</p>
+</div>
+</div>
+<div class="rank-math-list-item" id="faq-question-1758253891589">
+<h3 class="rank-math-question">So it’s not just about visibility, it actually shapes the final AI overview?</h3>
+<div class="rank-math-answer">
+<p>Absolutely. Because schema defines the relationships between entities on your page (e.g., this Product has this price and this aggregateRating), the AI can pull that formatted information and use it to construct more factual, detailed summaries. In many cases, you can see your structured data, like the steps from HowTo schema, lifted almost verbatim into the AI overview. Your data literally becomes a building block for the answer.</p>
+</div>
+</div>
+<div class="rank-math-list-item" id="faq-question-1758253917765">
+<h3 class="rank-math-question">What’s the risk if I just… don’t use schema? Can my page still show up?</h3>
+<div class="rank-math-answer">
+<p>Yes, it’s possible. Google’s AI is good enough to parse unstructured text. But the risk is misinterpretation. The AI has to make its best guess about your data’s meaning and context. This significantly increases the chance of errors, omissions, or the AI just plain getting it wrong. Proper schema markup is your insurance policy for accuracy. It gives you a way to guide the AI, rather than just hoping for the best.</p>
+</div>
+</div>
+</div>
+</div>
+<h3 class="wp-block-heading"></h3>
+</div>
         </div>
     </div>
 
@@ -186,31 +504,5 @@
         <p>&copy; 2025 Copiq. All rights reserved.</p>
         <p><a href="https://copiq.com">copiq.com</a></p>
     </footer>
-
-    <script>
-        // Fetch and display the original content
-        fetch('https://copiq.com/ai-seo/optimizing-ai-overviews-with-structured-data-schema/')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                // Try to extract the main article content
-                let content = doc.querySelector('article .entry-content') || 
-                             doc.querySelector('.post-content') ||
-                             doc.querySelector('.article-content') ||
-                             doc.querySelector('article') ||
-                             doc.querySelector('main');
-                
-                if (content) {
-                    document.getElementById('article-content').innerHTML = content.innerHTML;
-                } else {
-                    document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-seo/optimizing-ai-overviews-with-structured-data-schema/">Read the original article on Copiq.com →</a></p>';
-                }
-            })
-            .catch(error => {
-                document.getElementById('article-content').innerHTML = '<p>Content could not be loaded. <a href="https://copiq.com/ai-seo/optimizing-ai-overviews-with-structured-data-schema/">Read the original article on Copiq.com →</a></p>';
-            });
-    </script>
 </body>
 </html>
