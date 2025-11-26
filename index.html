@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Copiq - AI-Native Content Operations for Enterprise. From idea to multi-format publishing in minutes.">
+    <link rel="canonical" href="https://copiq.com/" />
     <title>Copiq - AI-Native Content Operations for Enterprise</title>
     <style>
         * {
@@ -61,6 +62,60 @@
 
         .nav-links a:hover {
             color: #0066ff;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            border-color: #0066ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,102,255,0.1);
+        }
+
+        .blog-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .blog-card a {
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+
+        .blog-card a:hover {
+            gap: 10px;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: #f3f4f6;
+            color: #6b7280;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: capitalize;
         }
 
         .hero {
@@ -361,6 +416,7 @@
             <ul class="nav-links">
                 <li><a href="#why-copiq">Why Copiq</a></li>
                 <li><a href="#products">Products</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#investors">Partners</a></li>
                 <li><a href="https://copiq.com">Main Site</a></li>
             </ul>
@@ -435,6 +491,173 @@
                     <h3>Social Content Gen</h3>
                     <p>Brief to multi-variant social in minutes. Hooks, captions, hashtags, and cut-downs aligned to campaign goals. Bulk generate, approve, and schedule from the same queue.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <h2 class="section-title">Latest from Our Blog</h2>
+            <p class="section-subtitle">Insights on AI, content operations, and enterprise technology from the Copiq team.</p>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <span class="blog-category">AI Technology</span>
+                    <h3>Generative Adversarial Networks</h3>
+                    <a href="blog/generative-adversarial-networks.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Video</span>
+                    <h3>List of Free AI Video Generators</h3>
+                    <a href="blog/list-of-free-ai-video-generators.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Content</span>
+                    <h3>What is the Difference Between Meta Tags and Keywords?</h3>
+                    <a href="blog/meta-tags-and-keywords.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Video</span>
+                    <h3>How to Summarize a YouTube Video Using AI Tools</h3>
+                    <a href="blog/summarize-youtube-video-ai.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI Technology</span>
+                    <h3>Cursor vs Copilot</h3>
+                    <a href="blog/cursor-vs-copilot.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI Technology</span>
+                    <h3>LLM.txt File</h3>
+                    <a href="blog/llm-txt-file.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Templates</span>
+                    <h3>How to Write a Book Using AI</h3>
+                    <a href="blog/write-book-using-ai.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Templates</span>
+                    <h3>Using AI for Grant Writing</h3>
+                    <a href="blog/ai-grant-writing.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI Technology</span>
+                    <h3>What is Agentic AI?</h3>
+                    <a href="blog/what-is-agentic-ai.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI SEO</span>
+                    <h3>Optimizing AI Overviews with Structured Data Schema</h3>
+                    <a href="blog/ai-overviews-structured-data.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI SEO</span>
+                    <h3>Optimize Content for Featured Snippets with AI Prompts</h3>
+                    <a href="blog/featured-snippets-ai-prompts.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Perplexity</span>
+                    <h3>How to Use Perplexity AI for Research</h3>
+                    <a href="blog/perplexity-ai-research.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Content</span>
+                    <h3>How to Humanize AI Content</h3>
+                    <a href="blog/humanize-ai-content.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI SEO</span>
+                    <h3>Google NLP for SEO</h3>
+                    <a href="blog/google-nlp-seo.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Content</span>
+                    <h3>Using AI to Write Performance Reviews</h3>
+                    <a href="blog/ai-performance-reviews.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Prompts</span>
+                    <h3>AI Prompt for Resume</h3>
+                    <a href="blog/ai-prompt-resume.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Content</span>
+                    <h3>Using ChatGPT for Cover Letters</h3>
+                    <a href="blog/chatgpt-cover-letters.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">DeepSeek</span>
+                    <h3>DeepSeek R1 Context Window</h3>
+                    <a href="blog/deepseek-r1-context-window.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Gemini</span>
+                    <h3>Gemini 2.5 Pro Coding Benchmark</h3>
+                    <a href="blog/gemini-coding-benchmark.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Models</span>
+                    <h3>Claude vs Gemini for Writing</h3>
+                    <a href="blog/claude-vs-gemini-writing.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Models</span>
+                    <h3>Claude vs ChatGPT for Writing</h3>
+                    <a href="blog/claude-vs-chatgpt-writing.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">AI Technology</span>
+                    <h3>What is a Context Window in AI?</h3>
+                    <a href="blog/context-window-ai.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Models</span>
+                    <h3>Gemini vs ChatGPT for Writing</h3>
+                    <a href="blog/gemini-vs-chatgpt-writing.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Prompts</span>
+                    <h3>AI Brand Guidelines</h3>
+                    <a href="blog/ai-brand-guidelines.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Claude</span>
+                    <h3>How to Use Claude Code</h3>
+                    <a href="blog/how-to-use-claude-code.html">Read Article →</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-category">Templates</span>
+                    <h3>Input HTML Tags</h3>
+                    <a href="blog/input-html-tags.html">Read Article →</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://copiq.com/latest-news/" class="cta-secondary">View All Blog Posts →</a>
             </div>
         </section>
 
