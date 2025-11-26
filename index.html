@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Copiq - Innovative tools and solutions for your business">
-    <title>Copiq - Business Tools & Solutions</title>
+    <meta name="description" content="Copiq - AI-Native Content Operations for Enterprise. From idea to multi-format publishing in minutes.">
+    <title>Copiq - AI-Native Content Operations for Enterprise</title>
     <style>
         * {
             margin: 0;
@@ -14,176 +14,452 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0066ff;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0066ff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            color: white;
+            padding: 120px 40px 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: white;
+            color: #0066ff;
+            padding: 18px 48px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 80px 40px;
         }
 
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 60px;
+        .section {
+            margin-bottom: 100px;
         }
 
-        h1 {
-            font-size: 3.5rem;
+        .section-title {
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.95;
-        }
-
-        .content {
-            background: white;
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 30px;
+            color: #1a1a1a;
             text-align: center;
         }
 
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #555;
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #6b7280;
             text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 30px auto;
-            display: block;
-            width: fit-content;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-
-        .features {
+        .two-column {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .problem-solution {
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 4px solid #0066ff;
+        }
+
+        .problem-solution h3 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .problem-solution ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-solution li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            color: #4b5563;
+            font-size: 1.05rem;
+        }
+
+        .problem-solution li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0066ff;
+            font-weight: bold;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
-        .feature {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
+        .product-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 36px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .feature:hover {
-            transform: translateY(-5px);
+        .product-card:hover {
+            border-color: #0066ff;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,102,255,0.1);
         }
 
-        .feature h3 {
-            color: #667eea;
+        .product-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            color: #0066ff;
+            font-weight: 700;
         }
 
-        .feature p {
+        .product-card p {
+            color: #4b5563;
+            line-height: 1.7;
             font-size: 1rem;
-            color: #666;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #0066ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .investors-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .investors-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .investors-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: #0066ff;
+            color: white;
+            padding: 18px 48px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        .links-section {
+            background: #f9fafb;
+            padding: 60px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .links-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: white;
+            color: #0066ff;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            border-color: #0066ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,102,255,0.15);
         }
 
         footer {
             text-align: center;
-            color: white;
-            padding: 30px 0;
-            opacity: 0.9;
+            padding: 60px 40px 40px;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            h1 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .tagline {
+            .hero .subtitle {
                 font-size: 1.2rem;
             }
 
-            .content {
-                padding: 40px 30px;
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            h2 {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
                 font-size: 2rem;
+            }
+
+            .container {
+                padding: 60px 20px;
             }
         }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">Copiq</div>
+            <ul class="nav-links">
+                <li><a href="#why-copiq">Why Copiq</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#investors">Partners</a></li>
+                <li><a href="https://copiq.com">Main Site</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>AI-Native Content Operations for Enterprise</h1>
+        <p class="subtitle">From idea to multi-format publishing — in minutes.</p>
+        <a href="https://copiq.com" class="cta-primary">Explore Copiq Platform →</a>
+    </section>
+
     <div class="container">
-        <header>
-            <h1>Copiq</h1>
-            <p class="tagline">Innovative Tools & Solutions for Modern Businesses</p>
-        </header>
-
-        <div class="content">
-            <h2>Welcome to Copiq</h2>
-            <p>
-                We create powerful, intuitive tools that help businesses streamline their workflows 
-                and achieve their goals. Our solutions are designed with simplicity and efficiency in mind.
-            </p>
-            <p>
-                Discover our full suite of tools and services at our main website.
-            </p>
+        <section id="why-copiq" class="section">
+            <h2 class="section-title">Why Copiq</h2>
+            <p class="section-subtitle">Transform content operations from weeks to minutes with AI-powered workflows and human oversight.</p>
             
-            <a href="https://copiq.com" class="cta-button">Visit Copiq.com →</a>
-
-            <div class="features">
-                <div class="feature">
-                    <h3>🚀 Powerful Tools</h3>
-                    <p>Cutting-edge solutions designed to solve real business challenges</p>
+            <div class="two-column">
+                <div class="problem-solution">
+                    <h3>The Problems We Solve</h3>
+                    <ul>
+                        <li>Too many silos. Teams rebuild the same workflows and reports.</li>
+                        <li>Too slow. Weeks to launch, months to scale.</li>
+                        <li>Talent waste. Experts stuck in repeatable execution.</li>
+                        <li>No single truth. Unit cost and ROI scattered in spreadsheets.</li>
+                    </ul>
                 </div>
-                <div class="feature">
-                    <h3>✨ Easy to Use</h3>
-                    <p>Intuitive interfaces that your team will love to use every day</p>
-                </div>
-                <div class="feature">
-                    <h3>💼 Business Focused</h3>
-                    <p>Built with your business needs and growth in mind</p>
+                
+                <div class="problem-solution">
+                    <h3>Our Solution</h3>
+                    <ul>
+                        <li>One control center. Plan → produce → publish → measure across brands.</li>
+                        <li>AI with oversight. Human-in-the-loop keeps speed and quality.</li>
+                        <li>Credits, not chaos. Predictable spend with brand allocation & rollovers.</li>
+                        <li>Outcome tracking. Usage → content → business results, linked.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2024 Copiq. All rights reserved.</p>
-            <p>Visit us at <a href="https://copiq.com" style="color: white; text-decoration: underline;">copiq.com</a></p>
-        </footer>
+        <section id="products" class="section">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Enterprise-grade content engines built for scale, speed, and measurable outcomes.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">CORE PLATFORM</span>
+                    <h3>Ops Center</h3>
+                    <p>Your multi-brand control room. Plan, produce, and publish at scale from a single queue with real-time usage and ROI tracking by brand, format, and campaign.</p>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">EDITORIAL</span>
+                    <h3>AI Newsroom</h3>
+                    <p>High-volume, human-in-the-loop editorial. Deep research templates, QA gates, and scheduled releases optimized to capture search and social intent in hours, not weeks.</p>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">PR AUTOMATION</span>
+                    <h3>PR → Content Engine</h3>
+                    <p>Turn one press release into dozens of publisher-ready stories tailored to verticals. Push directly to CMSes with traceable source and compliance.</p>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">DATA-DRIVEN</span>
+                    <h3>API → Content Engine</h3>
+                    <p>Transform live data into search-optimized landing pages mapped to real-time demand—fully templated, fully trackable.</p>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">COMING SOON</span>
+                    <h3>Social Content Gen</h3>
+                    <p>Brief to multi-variant social in minutes. Hooks, captions, hashtags, and cut-downs aligned to campaign goals. Bulk generate, approve, and schedule from the same queue.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="investors" class="investors-section">
+            <h2>For Investors & Strategic Partners</h2>
+            <p>We're seeking partners who want to be first to market with AI-native content operations at enterprise scale. Whether you're an investor, publisher, platform, or global brand, Copiq can become your shared content engine and instantly scale across your entire portfolio.</p>
+            <a href="mailto:contact@copiq.com" class="cta-secondary">Let's Talk →</a>
+        </section>
+
+        <section class="links-section">
+            <h3>Resources & Links</h3>
+            <div class="links-grid">
+                <a href="https://copiq.com" class="link-button">Main Platform</a>
+                <a href="https://copiq.com" class="link-button">Documentation</a>
+                <a href="https://copiq.com" class="link-button">Case Studies</a>
+                <a href="https://copiq.com" class="link-button">API Access</a>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Copiq. All rights reserved.</p>
+        <p>AI-Native Content Operations for Enterprise</p>
+        <p><a href="https://copiq.com">copiq.com</a> | <a href="mailto:contact@copiq.com">contact@copiq.com</a></p>
+    </footer>
 </body>
 </html>
 
