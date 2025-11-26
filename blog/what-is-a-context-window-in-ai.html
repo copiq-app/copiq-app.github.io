@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Context Windows Explained: What They Are and Why They Matter | Copiq</title>
+    <title>Understanding The CONTEXT WINDOW – Is It SHORT TERM MEMORY? | Copiq</title>
     <link rel="canonical" href="https://copiq.com/ai-technology/what-is-a-context-window-in-ai/" />
     <meta name="robots" content="noindex, follow">
     <style>
@@ -117,6 +117,11 @@
             margin: 30px 0 15px;
             color: #1a1a1a;
         }
+        .content h4 {
+            font-size: 1.3rem;
+            margin: 25px 0 12px;
+            color: #1a1a1a;
+        }
         .content p {
             margin-bottom: 20px;
         }
@@ -149,6 +154,28 @@
             background: none;
             padding: 0;
             color: #ffffff;
+        }
+        .content blockquote {
+            border-left: 4px solid #0066ff;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .content table th,
+        .content table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        .content table th {
+            background: #f3f4f6;
+            font-weight: 600;
         }
         footer {
             text-align: center;
@@ -185,8 +212,8 @@
     </nav>
 
     <div class="container">
-        <span class="category">AI Technology</span>
-        <h1>What is a Context Window in AI?</h1>
+        <span class="category">Ai Technology</span>
+        <h1>Understanding The CONTEXT WINDOW – Is It SHORT TERM MEMORY?</h1>
         
         <div class="original-link">
             <p>📌 This content is syndicated from <a href="https://copiq.com/ai-technology/what-is-a-context-window-in-ai/" target="_blank" rel="noopener">copiq.com</a>. Read the original article for the most up-to-date version.</p>
@@ -201,7 +228,7 @@
 <p>At its heart, the context window is a fixed-size buffer. It’s the model’s entire field of view for generating the next word. It’s not a permanent memory bank; it’s a transient workspace that gets wiped clean and reloaded with every single request you make. This workspace holds your latest prompt, the recent back-and-forth of the conversation, and often a hidden set of instructions called the system prompt. The size of this window is arguably one of the most critical constraints on what an LLM can do. It’s the difference between an AI that can summarize a 300-page book in one go and one that forgets what you said three sentences ago.</p>
 <p>The significance here is huge. A model with a small context window, say 4,000 tokens, will inevitably struggle if you ask a question that relies on information you provided ten turns earlier. The older details simply fall out of its “memory,” leading to frustratingly generic or inaccurate answers. But with the massive context windows we’re seeing now from Google, Anthropic, and others, a model can hold the entire thread of a complex dialogue, analyze a whole codebase, or review a massive report in a single pass. This isn’t just an incremental improvement; it’s a fundamental change in capability.</p>
 <div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
-<figure class="wp-block-image aligncenter size-large"><picture><source sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png.webp 1024w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png.webp 300w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png.webp 768w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png.webp 1101w" type="image/webp"/><img alt="short term memory with AI" class="wp-image-319" data-eio="p" decoding="async" height="248" sizes="(max-width: 1024px) 100vw, 1024px" src="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png" srcset="https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png 1024w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png 300w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png 768w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png 1101w" width="1024"/></picture></figure>
+<figure class="wp-block-image aligncenter size-large"><picture><source sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png.webp 1024w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png.webp 300w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png.webp 768w, https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png.webp 1101w" type="image/webp"/><img alt="short term memory with AI" class="wp-image-319" data-eio="p" decoding="async" height="248" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" src="https://copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png" srcset="https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-1024x248.png 1024w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-300x73.png 300w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI-768x186.png 768w, https:https://copiq.com//copiq.com/wp-content/uploads/2025/08/context-windows-in-AI.png 1101w" width="1024"/></picture></figure>
 <div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
 <h3 class="wp-block-heading">How it Functions as Short-Term Memory</h3>
 <p>The “short-term memory” analogy is pretty spot-on, technically. When you send a prompt, the model loads that text, plus whatever conversational history fits, into its active processing space. The secret sauce, the self-attention mechanism, then gets to work, meticulously comparing every single token in that window to every other token. This is how it figures out that “it” in your last sentence refers to the “database schema” you mentioned five minutes ago.</p>
@@ -240,7 +267,7 @@
 <p>The race for bigger context windows has been one of the main battlegrounds for AI labs like OpenAI, Google, and Anthropic. Early models were severely constrained, but the recent explosion in window sizes has unlocked entirely new use cases.</p>
 <p>Here’s a look at how things have changed. A bigger <strong>context window</strong> dramatically improves an AI’s <strong>ability</strong> to digest <strong>information</strong> from long <strong>inputs</strong>, directly affecting <strong>performance</strong> and <strong>accuracy</strong>. This is what allows models from <strong>Google</strong> and others to tackle a complex user <strong>question</strong> without running into <strong>issues</strong> with forgotten context.</p>
 <div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
-<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Model / Concept</th><th>Context Window Size (Tokens)</th><th>Approx. English Word Count</th><th>Impact on Performance and Ability</th></tr><tr><td><strong>Token (Fundamental Unit)</strong></td><td>N/A (Unit of Measurement)</td><td>~0.75 of an English word</td><td>This is the basic piece of information. The granularity of processing.</td></tr><tr><td><strong>Smaller Context Windows</strong></td><td>4,000 – 16,000</td><td>~3,000 – 12,000 words</td><td>Limited. You’d struggle with long documents and often lose context, which really hurts output accuracy.</td></tr><tr><td><strong>OpenAI GPT-4 Turbo</strong></td><td>128,000</td><td>~96,000 words</td><td>A huge leap. Great performance for analyzing something like a 300-page book in one shot. Much better efficiency.</td></tr><tr><td><strong>Anthropic <a data-id="https://copiq.com/models/claude-versus-chatgpt-for-writing/" data-type="link" href="https://copiq.com/models/claude-versus-chatgpt-for-writing/">Claude</a> 3 Family</strong></td><td>200,000</td><td>~150,000 words</td><td>Excellent recall accuracy over very long texts. Has the ability to process multiple documents or entire codebases.</td></tr><tr><td><strong>Google Gemini 1.5 Pro</strong></td><td>1,000,000 (In Preview)</td><td>~750,000 words</td><td>Peak performance right now. It can process an hour of video or over 700k words of text in a single input.</td></tr><tr><td><strong>“Lost in the Middle” Issue</strong></td><td>Affects all context windows</td><td>N/A</td><td>A known AI problem where information in the middle of a long input gets ignored, reducing accuracy. A real-world gotcha.</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Model / Concept</th><th>Context Window Size (Tokens)</th><th>Approx. English Word Count</th><th>Impact on Performance and Ability</th></tr><tr><td><strong>Token (Fundamental Unit)</strong></td><td>N/A (Unit of Measurement)</td><td>~0.75 of an English word</td><td>This is the basic piece of information. The granularity of processing.</td></tr><tr><td><strong>Smaller Context Windows</strong></td><td>4,000 – 16,000</td><td>~3,000 – 12,000 words</td><td>Limited. You’d struggle with long documents and often lose context, which really hurts output accuracy.</td></tr><tr><td><strong>OpenAI GPT-4 Turbo</strong></td><td>128,000</td><td>~96,000 words</td><td>A huge leap. Great performance for analyzing something like a 300-page book in one shot. Much better efficiency.</td></tr><tr><td><strong>Anthropic <a data-id="https://copiq.com/models/claude-versus-chatgpt-for-writing/" data-type="link" href="https://copiq.com/models/claude-versus-chatgpt-for-writing/" rel="noopener" target="_blank">Claude</a> 3 Family</strong></td><td>200,000</td><td>~150,000 words</td><td>Excellent recall accuracy over very long texts. Has the ability to process multiple documents or entire codebases.</td></tr><tr><td><strong>Google Gemini 1.5 Pro</strong></td><td>1,000,000 (In Preview)</td><td>~750,000 words</td><td>Peak performance right now. It can process an hour of video or over 700k words of text in a single input.</td></tr><tr><td><strong>“Lost in the Middle” Issue</strong></td><td>Affects all context windows</td><td>N/A</td><td>A known AI problem where information in the middle of a long input gets ignored, reducing accuracy. A real-world gotcha.</td></tr></tbody></table></figure>
 <p><em>Sources: Data compiled from official announcements and documentation from Google AI, OpenAI, and Anthropic (2023-2024).</em></p>
 <div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>
 <h3 class="wp-block-heading">From Early Models to Today’s Giants</h3>
